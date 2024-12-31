@@ -1,11 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import VerifyIcon from "../../public/icons/VerifyIcon";
+import { useState } from "react";
 
 const Signin = () => {
   const navigate = useNavigate();
+  const [emailValue, setEmailValue] = useState("");
+
   return (
     <div className="flex flex-col md:flex-row h-screen">
       {/* Left Section */}
-      <div className="flex w-full md:w-[60%] lg:w-[65%] bg-white justify-center items-center md:px-4 xl:px-60 2k:px-44">
+      <div className="flex w-full md:w-[60%] lg:w-[65%] bg-white justify-center items-center md:px-8 xl:px-64 2k:px-44">
         <div className="w-[90vw]">
           <h1 className="text-2xl md:text-4xl 2k:text-7xl font-semibold text-center mb-1 xs:mt-32 md:mt-0">
             Sign in
@@ -14,31 +18,68 @@ const Signin = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et.
           </p>
-          <form className="space-y-4 2k:space-y-8">
-            <input type="email" placeholder="Email" className="input-style" />
-            <input
-              type="password"
-              placeholder="Password"
-              className="input-style"
-            />
-            <div className="flex items-center justify-between px-2">
-              <div className="flex items-center">
+          <div className="flex flex-col items-center">
+            <form className="space-y-4 2k:space-y-8 md:w-[45vw] xl:w-[25vw] 2k:w-[30vw]">
+              <div className="relative w-full">
+                {/* Input Field */}
+                <input
+                  type="email"
+                  placeholder="EMAIL"
+                  className="input-style pl-10"
+                  value={emailValue}
+                  onChange={(e) => setEmailValue(e.target.value)}
+                />
+
+                {/* Icon - Positioned inside the input */}
+                {emailValue && (
+                  <div className="absolute right-5 top-1/2 transform -translate-y-1/2">
+                    <VerifyIcon />
+                  </div>
+                )}
+              </div>
+      
+              {/* <Dropdown/> */}
+              <div className="relative w-full">
+                {/* Input Field */}
+                <input
+                  type="password"
+                  placeholder="PASSWORD"
+                  className="input-style pl-10"
+                />
+
+                {/* Icon - Positioned inside the input */}
+                {/* {passwordValue && (
+                  <div className="absolute right-5 top-1/2 transform -translate-y-1/2">
+                    <VerifyIcon />
+                  </div>
+                )} */}
+              </div>
+              <div className="flex items-center justify-center">
                 <input
                   type="checkbox"
                   className="h-4 2k:h-12 w-4 2k:w-12 mr-2 2k:mr-8"
                 />
-                <label className="text-xs 2k:text-4xl mt-1">Remember me</label>
+                <label className="text-xs 2k:text-4xl">
+                  I Agree to the{" "}
+                  <a href="#" className="text-blue-500">
+                    Terms and Conditions
+                  </a>
+                </label>
               </div>
-              <span className="text-xs 2k:text-4xl text-gray-400 mr-2">Forgot Password?</span>
-            </div>
-            <div className="flex justify-center text-sm 2k:text-5xl">
-              <button className="button-style mt-2">SIGN IN</button>
-            </div>
-          </form>
+              <div className="flex justify-center text-sm 2k:text-5xl">
+                <button className="button-style">SIGN UP</button>
+              </div>
+            </form>
+          </div>
           <div className="md:hidden signupFooter absolute bottom-0 right-0 left-0 bg-custom-blue h-12 text-white text-center flex flex-col justify-center">
             <p className="text-xs">
               Don&apos;t have an account?{" "}
-              <span className="font-semibold underline" onClick={() => navigate("/signup")}>Sign Up</span>
+              <span
+                className="font-semibold underline"
+                onClick={() => navigate("/signup")}
+              >
+                Sign Up
+              </span>
             </p>
           </div>
         </div>
@@ -53,7 +94,10 @@ const Signin = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et.
         </div>
-        <button className="px-10 2k:px-14 py-2 2k:py-4 2k:text-5xl text-white border border-white rounded-full"  onClick={() => navigate("/signup")}>
+        <button
+          className="px-10 2k:px-14 py-2 2k:py-4 2k:text-5xl text-white border border-white rounded-full"
+          onClick={() => navigate("/signup")}
+        >
           SIGN UP
         </button>
       </div>
