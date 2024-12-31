@@ -14,7 +14,7 @@ const App = () => {
     },
     {
       path: "/",
-      element: <Signup />, 
+      element: <Signup />,  
     },
   ])
   return (
