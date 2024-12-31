@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import VerifyIcon from "../../public/icons/verifyIcon";
+import VerifyIcon from "../../public/icons/VerifyIcon";
 // import Dropdown from "../components/SelectDropdown";
 
 const Signup = () => {
