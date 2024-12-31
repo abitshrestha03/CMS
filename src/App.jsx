@@ -12,6 +12,10 @@ const App = () => {
       path:"/signin",
       element:<Signin/>,
     },
+    {
+      path: "/",
+      element: <Signup />, 
+    },
   ])
   return (
     <>
