@@ -19,7 +19,7 @@ const Signin = () => {
             eiusmod tempor incididunt ut labore et.
           </p>
           <div className="flex flex-col items-center">
-            <form className="space-y-4 2k:space-y-8 md:w-[45vw] xl:w-[25vw] 2k:w-[30vw]">
+            <form className="space-y-4 2k:space-y-8 w-full md:w-[45vw] xl:w-[25vw] 2k:w-[30vw]">
               <div className="relative w-full">
                 {/* Input Field */}
                 <input
