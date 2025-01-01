@@ -18,7 +18,7 @@ const ToggleAuthPage = () => {
     <div className="flex h-screen overflow-hidden">
       {/* Left Panel */}
       <div
-        className={`w-full md:w-[65vw] flex items-center justify-center bg-white transition-transform duration-500  md:px-12 lg:px-28 xl:px-48 2k:px-44 ${
+        className={`w-full md:w-[65vw] flex items-center justify-center bg-white transition-transform duration-500  md:px-12 lg:px-28 xl:px-44 2k:px-44 ${
           isSignUp ? "md:translate-x-[35vw]" : ""
         }`}
       >
@@ -33,7 +33,7 @@ const ToggleAuthPage = () => {
           <div className="flex flex-col items-center">
             {isSignUp ? (
               <>
-                <form className="xs:space-y-5 md:space-y-7 2k:space-y-12 w-full md:w-[50vw] lg:w-[40vw] xl:w-[32vw]">
+                <form className="xs:space-y-5 md:space-y-7 2k:space-y-12 w-full md:w-[50vw] lg:w-[41vw] xl:w-[38vw]">
                   <div className="relative w-full">
                     {/* Input Field */}
                     <input
@@ -98,7 +98,7 @@ const ToggleAuthPage = () => {
               </>
             ) : (
               <>
-                <form className="space-y-7 2k:space-y-8 w-full md:w-[47vw] xl:w-[32vw] 2k:w-[30vw]">
+                <form className="xs:space-y-5 md:space-y-7 2k:space-y-8 w-full md:w-[52vw] lg:w-[45vw] xl:w-[38vw] 2k:w-[30vw]">
                   <div className="relative w-full">
                     {/* Input Field */}
                     <input
@@ -126,7 +126,7 @@ const ToggleAuthPage = () => {
                       className="input-style pl-10"
                     />
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between px-2">
                     <div className="flex items-center">
                       <input
                         type="checkbox"
@@ -150,14 +150,14 @@ const ToggleAuthPage = () => {
 
       {/* Right Panel */}
       <div
-        className={`md:w-[35vw] bg-custom-blue text-white hidden md:flex flex-col items-center justify-center text-center px-12 transition-transform duration-500 ${
+        className={`md:w-[35vw] bg-custom-blue text-white hidden md:flex flex-col items-center justify-center text-center md:px-2 lg:px-12 transition-transform duration-500 ${
           isSignUp ? "md:-translate-x-[65vw]" : ""
         }`}
       >
         <h1 className="text-4xl 2k:text-8xl font-semibold">
           {isSignUp ? "Welcome Back" : "Hello,"}
         </h1>
-        <p className="text-center text-[#F4F4F4] text-md 2k:text-4xl mt-3 mb-6 font-light">
+        <p className="text-center text-[#F4F4F4] md:text-xs lg:text-md 2k:text-4xl mt-3 mb-6 font-light">
           {isSignUp
             ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et."
             : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et."}
