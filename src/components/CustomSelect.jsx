@@ -60,7 +60,7 @@ export default function CustomSelect() {
           {options.map((option, index) => (
             <div
               key={index}
-              className={`px-4 2k:px-8 py-3 2k:py-8 text-xs 2k:text-4xl cursor-pointer text-custom-gray hover:bg-gray-100 ${
+              className={`px-4 2k:px-8 py-5 2k:py-8 text-xs 2k:text-4xl cursor-pointer text-custom-gray hover:bg-gray-100 ${
                 index === options.length - 1 ? "rounded-b-[24px] 2k:rounded-b-[80px]" : ""
               }`}
               onClick={() => handleOptionClick(option)}
