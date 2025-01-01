@@ -5,14 +5,26 @@ import VerifyIcon from "../../public/icons/VerifyIcon";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const [animateOut, setAnimateOut] = useState(false);
   const [fullnameValue, setFullNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
 
+  const handleSignIn = () => {
+    setAnimateOut(true); // Trigger animation
+    setTimeout(() => {
+      navigate("/signin"); // Navigate after animation
+    }, 500); // Adjust timeout to match animation duration
+  };
+
   return (
     <div className="flex flex-col md:flex-row h-screen">
       {/* Left Section */}
-      <div className="hidden md:flex md:w-[40%] lg:w-[35%] bg-custom-blue text-white tracking-wide flex-col justify-center items-center md:px-8 px-16">
+      <div
+        className={`hidden md:flex md:w-[40%] lg:w-[35%] bg-custom-blue text-white tracking-wide flex-col justify-center items-center md:px-8 px-16 transform transition-transform duration-500 z-50 ${
+          animateOut?"translate-x-full":""
+        }`}
+      >
         <div className="text-center">
           <h1 className="text-4xl 2k:text-8xl font-semibold">Welcome Back</h1>
         </div>
@@ -23,7 +35,7 @@ const Signup = () => {
         </div>
         <button
           className="px-10 2k:px-14 py-2 2k:py-4 2k:text-5xl text-white border border-white rounded-full"
-          onClick={() => navigate("/signin")}
+          onClick={handleSignIn}
         >
           SIGN IN
         </button>
@@ -166,3 +178,6 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
+
