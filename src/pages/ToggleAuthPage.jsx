@@ -157,7 +157,7 @@ const ToggleAuthPage = () => {
         <h1 className="text-4xl 2k:text-8xl font-semibold">
           {isSignUp ? "Welcome Back" : "Hello,"}
         </h1>
-        <p className="text-center text-[#F4F4F4] md:text-xs lg:text-md 2k:text-4xl mt-3 mb-6 font-light">
+        <p className="text-center text-[#F4F4F4] md:text-xs lg:text-[14px] tracking-wide 2k:text-4xl mt-3 mb-6 font-light">
           {isSignUp
             ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et."
             : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et."}
