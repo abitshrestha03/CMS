@@ -11,15 +11,15 @@ const Signin = () => {
       {/* Left Section */}
       <div className="flex w-full md:w-[60%] lg:w-[65%] bg-white justify-center items-center md:px-8 xl:px-64 2k:px-44">
         <div className="w-[90vw]">
-          <h1 className="text-2xl md:text-4xl 2k:text-7xl font-semibold text-center mb-1 xs:mt-32 md:mt-0">
+          <h1 className="text-2xl md:text-4xl 2k:text-7xl text-[#3C3C3C] font-semibold text-center mb-3 xs:mt-32 md:mt-0">
             Sign in
           </h1>
-          <p className="mb-6 text-xs lg:text-sm 2k:text-3xl text-center text-gray-400 leading-tight tracking-wider">
+          <p className="mb-12 text-xs lg:text-sm 2k:text-3xl text-center text-custom-gray leading-tight tracking-wider">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et.
           </p>
           <div className="flex flex-col items-center">
-            <form className="space-y-4 2k:space-y-8 w-full md:w-[45vw] xl:w-[25vw] 2k:w-[30vw]">
+            <form className="space-y-7 2k:space-y-8 w-full md:w-[47vw] xl:w-[32vw] 2k:w-[30vw]">
               <div className="relative w-full">
                 {/* Input Field */}
                 <input
@@ -37,7 +37,7 @@ const Signin = () => {
                   </div>
                 )}
               </div>
-      
+
               {/* <Dropdown/> */}
               <div className="relative w-full">
                 {/* Input Field */}
@@ -54,20 +54,18 @@ const Signin = () => {
                   </div>
                 )} */}
               </div>
-              <div className="flex items-center justify-center">
-                <input
-                  type="checkbox"
-                  className="h-4 2k:h-12 w-4 2k:w-12 mr-2 2k:mr-8"
-                />
-                <label className="text-xs 2k:text-4xl">
-                  I Agree to the{" "}
-                  <a href="#" className="text-blue-500">
-                    Terms and Conditions
-                  </a>
-                </label>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    className="h-4 2k:h-12 w-4 2k:w-12 mr-2 2k:mr-8"
+                  />
+                  <label className="text-xs 2k:text-4xl">Remember me</label>
+                </div>
+                <a href="" className="text-custom-gray text-sm">Forgot Password?</a>
               </div>
               <div className="flex justify-center text-sm 2k:text-5xl">
-                <button className="button-style">SIGN UP</button>
+                <button className="button-style mt-2">SIGN IN</button>
               </div>
             </form>
           </div>

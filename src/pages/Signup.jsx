@@ -30,16 +30,16 @@ const Signup = () => {
       </div>
       {/* Right Section */}
       <div className="flex w-full md:w-[60%] lg:w-[60%] bg-white justify-center items-center md:px-12 lg:px-28 xl:px-48 2k:px-44">
-        <div className="w-[90vw]">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl 2k:text-7xl font-semibold text-center mb-1 mt-24">
+        <div className="w-[90vw] flex flex-col justify-center items-center">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl 2k:text-7xl text-[#3C3C3C] font-semibold text-center mb-3">
             Create Account
           </h1>
-          <p className="mb-6 text-xs lg:text-sm 2k:text-3xl text-center text-gray-400 leading-tight tracking-wider">
+          <p className="mb-12 text-xs lg:text-sm 2k:text-3xl text-center text-custom-gray leading-tight tracking-wider">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et.
           </p>
           <div className="flex flex-col items-center">
-            <form className="space-y-4 2k:space-y-8 w-full md:w-[45vw] lg:w-[35vw] xl:w-[30vw]">
+            <form className="space-y-7 2k:space-y-12 w-full md:w-[50vw] lg:w-[40vw] xl:w-[32vw]">
               <div className="relative w-full">
                 {/* Input Field */}
                 <input
@@ -138,7 +138,7 @@ const Signup = () => {
                 />
                 <label className="text-xs 2k:text-4xl">
                   I Agree to the{" "}
-                  <a href="#" className="text-blue-500">
+                  <a href="#" className="text-[#4A90E2]">
                     Terms and Conditions
                   </a>
                 </label>
