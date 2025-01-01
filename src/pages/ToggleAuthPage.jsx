@@ -15,7 +15,7 @@ const ToggleAuthPage = () => {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen overflow-y-auto">
       {/* Left Panel */}
       <div
         className={`w-full md:w-[65vw] flex items-center justify-center bg-white transition-transform duration-500  md:px-12 lg:px-28 xl:px-44 2k:px-44 ${
@@ -38,7 +38,7 @@ const ToggleAuthPage = () => {
                     {/* Input Field */}
                     <input
                       type="text"
-                      placeholder="Full Name"
+                      placeholder="FULL NAME"
                       className="input-style pl-10"
                       value={fullnameValue}
                       onChange={(e) => setFullNameValue(e.target.value)}
