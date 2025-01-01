@@ -15,15 +15,10 @@
 }
 
 .button-style {
-  @apply bg-gradient-to-r from-[#4A90E2] to-[#2877D5] py-3 2k:py-4 px-12 2k:px-14 rounded-full text-white font-semibold transition-all duration-300 ease-out transform hover:scale-105 focus:outline-none;
-  animation: smart-animate 300ms ease-out;
+  @apply bg-gradient-to-r from-[#4A90E2] to-[#2877D5] py-3 2k:py-4 px-12 2k:px-14 rounded-full text-white font-semibold transition-all duration-300 ease-in-out transform focus:outline-none;
 }
 
-@keyframes smart-animate {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
+/* Add hover effect to darken the button */
+.button-style:hover {
+  @apply bg-gradient-to-r from-[#3B7FC1] to-[#1F5E9C]; /* Darken the gradient colors */
 }
