@@ -3,7 +3,7 @@ import VerifyIcon from "../../public/icons/VerifyIcon";
 import CustomSelect from "../components/CustomSelect";
 
 const ToggleAuthPage = () => {
-  const [isSignUp, setIsSignUp] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(true);
 
   const [fullnameValue, setFullNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
